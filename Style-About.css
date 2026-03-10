@@ -1,0 +1,249 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+body {
+    background-image: url(Adawong.jpg);
+    color: #ffffff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+nav {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 0 0 0.1em #FFF, 0 0 0.2em #FFF, 0 0 0.5em #ff4d4d;
+    margin-top: 1px; 
+    color: #FFF;
+    padding: 20px 80px;
+    background: #343434;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+.active {
+    color: #ff5656;
+}
+
+.Logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ============================================
+   CONTAINER (Glassmorphism Effect)
+   ============================================ */
+.container, .container1 {
+    text-shadow: white 0 0 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 40px;
+    border: 8px solid rgba(255, 255, 255, 0.1); /* ✅ Perbaikan: Tambah warna transparan */
+    background: rgba(74, 75, 75, 0.2);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font: 1.2rem "Fira Sans", sans-serif;
+    display: grid;
+    place-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #d9d9d9;
+}
+
+/* ============================================
+   IMAGE GALLERY (Hobi & Makanan)
+   ============================================ */
+.hobby-gallery, .food-gallery {
+    text-align: center;
+    padding: 40px;
+}
+
+.hobby-gallery h2, .food-gallery h2 {
+    text-shadow: white 0 0 20px;
+    text-align: center;
+    font-size: 50px;
+    font: 2rem "Fira Sans", sans-serif;
+    margin-bottom: 30px;
+}
+
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(255, 60, 60, 0.25) 0px 14px 28px, rgba(186, 186, 186, 0.22) 0px 10px 10px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* ============================================
+   MUSIC & VIDEO SECTION
+   ============================================ */
+.music-cover {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+iframe {
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 3px #ff7373, 0 0 4px #ff7373, 0 0 5px #ff7373;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   RESPONSIVE (Mobile & Tablet)
+   ============================================ */
+@media(max-width: 768px) {
+    /* Navbar Mobile */
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Hero Section Mobile */
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero-text p {
+        font-size: 14px;
+    }
+    
+    /* Container Mobile */
+    .container, .container1 {
+        margin: 20px;
+        padding: 15px;
+    }
+    
+    /* Image Gallery Mobile */
+    .hobby-gallery h2, .food-gallery h2 {
+        font-size: 30px;
+    }
+    
+    .image {
+        flex-direction: column;
+    }
+    
+    .image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    /* Iframe Mobile */
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE (Small Mobile)
+   ============================================ */
+@media(max-width: 480px) {
+    nav {
+        padding: 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .hobby-gallery h2, .food-gallery h2 {
+        font-size: 24px;
+    }
+    
+    .image img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .container, .container1 {
+        margin: 15px;
+    }
+}
